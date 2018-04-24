@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Time Machine</title>
+</head>
+<body onload="setInterval(fun1,1000)">
+    <div style="display: flex; background:cyan;align-items: center; justify-content: center; text-align: center; border-radius: 10px">
+	<p id="time" style="font-style: bold; color:blue;text-align: center; font-size: 100px; "></p>
+	</div>
+	<script type="text/javascript">
+		function fun1() {
+
+			var dt=new Date();
+
+		var hr=dt.getHours();
+		var min=dt.getMinutes();
+		var sec=dt.getSeconds();
+
+			var total=((hr%12)+":"+min+":"+sec);
+			document.getElementById('time').innerHTML=total;
+		}
+		
+	</script>
+
+</body>
+</html>
